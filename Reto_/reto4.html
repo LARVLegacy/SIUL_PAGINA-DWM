@@ -1,0 +1,27 @@
+<p class="texto"><span id="lectura"></span></p>
+
+<script type="text/javascript">
+    
+    const numero = parseInt(prompt("Ingresa un número entero mayor que 1:"));
+    let esPrimo = true;
+
+    if (numero <= 1) {
+        mensaje = ("El número debe ser mayor que 1.");
+    } else {
+        for (let i = 2; i < numero; i++) {
+            if (numero % i === 0) {
+                esPrimo = false;
+                break;
+            }
+        }
+
+        if (esPrimo) {
+            mensaje = (`${numero} es un número primo.`);
+        } else {
+            mensaje = (`${numero} no es un número primo.`);
+        }
+    }
+
+    lectura.innerHTML = mensaje;
+
+</script>

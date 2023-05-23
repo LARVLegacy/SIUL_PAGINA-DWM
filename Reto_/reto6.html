@@ -1,0 +1,18 @@
+<p class="texto"><span id="lectura"></span></p>
+
+<script type="text/javascript">
+    
+    let suma = 0;
+        let contador = 0;
+
+        while (suma < 50) {
+            const numero = parseInt(prompt("Ingresa un número:"));
+            suma += numero;
+            contador++;
+        }
+
+        mensaje = (`La suma total es ${suma} y se han introducido ${contador} números.`);
+    
+    lectura.innerHTML = mensaje;
+
+</script>

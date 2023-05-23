@@ -57,6 +57,7 @@ img {
 .articulos {
     width: 80%;
     border-right: 3px solid black;
+    
 }
 
 .secciones {
@@ -68,6 +69,8 @@ img {
 .menu-secundario {
     width: 20%;
     margin-top: 60px;
+    text-align: center;
+    
 }
 
 .menu-secundario a {
@@ -102,17 +105,99 @@ p {
 
 }
 
-@media(max-width:610px){
+
+@media(max-width:620px){
 
     img {
-        width: 75px;
-        height: 100px;
+
+        margin-top: 20px;
+        width: 150px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: flex;
+    }
+
+}
+/*
+@media(max-width:580px){
+
+    img {
+
+        margin-top: 20px;
+        width: 120px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: flex;
+    }
+
+}
+
+@media(max-width:540px) {
+
+    img {
+
+        margin-top: 20px;
+        width: 90px;
+        height: 120px;
         border-radius: 50%;
         object-fit: cover;
         display: flex;
     }
 }
 
-@media(max-width:580px){
+*/
+
+@media(max-width:510px){
+
+    .articulos {
+        border-right: rgb(184, 184, 184);
+        width: 100%;
+    }
+
+    img {
+        width: 175px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: flex;
+    }
+
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    
+    .menu-secundario {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
 
 }
+
+
+@media (max-width:410px) {
+
+    img {
+
+        margin-top: 20px;
+        width: 150px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: flex;
+    }
+
+    .secciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+
+}
+
+

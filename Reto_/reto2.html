@@ -1,0 +1,27 @@
+<p class="texto"><span id="lectura"></span></p>
+
+<script type="text/javascript">
+
+    const figura = prompt("¿De qué figura quieres calcular el área? (triángulo, rectángulo o círculo)");
+
+    if (figura === "triángulo") {
+        const base = parseFloat(prompt("Ingresa la base del triángulo:"));
+        const altura = parseFloat(prompt("Ingresa la altura del triángulo:"));
+        const area = base * altura / 2;
+        mensaje = (`El área del triángulo es ${area}.`);
+    } else if (figura === "rectángulo") {
+        const base = parseFloat(prompt("Ingresa la base del rectángulo:"));
+        const altura = parseFloat(prompt("Ingresa la altura del rectángulo:"));
+        const area = base * altura;
+        mensaje = (`El área del rectángulo es ${area}.`);
+    } else if (figura === "círculo") {
+        const radio = parseFloat(prompt("Ingresa el radio del círculo:"));
+        const area = Math.PI * radio ** 2;
+        mensaje = (`El área del círculo es ${area}.`);
+    } else {
+        mensaje = (`Lo siento, no conozco la figura "${figura}".`);
+    }
+
+    lectura.innerHTML = mensaje;
+
+</script>

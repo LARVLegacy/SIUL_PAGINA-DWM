@@ -1,0 +1,16 @@
+<p class="texto"><span id="lectura"></span></p>
+
+<script type="text/javascript">
+
+    const colores = ["azul", "amarillo", "rojo", "verde", "rosa"];
+    const colorUsuario = prompt("Introduce un color");
+
+    if (colores.includes(colorUsuario)) {
+        mensaje = (`El color ${colorUsuario} se encuentra en el array`);
+    } else {
+        mensaje = (`El color ${colorUsuario} no se encuentra en el array`);
+    }
+
+    lectura.innerHTML = mensaje;
+
+</script>

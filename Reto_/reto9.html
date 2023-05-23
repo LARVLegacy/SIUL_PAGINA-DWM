@@ -1,0 +1,21 @@
+<p class="texto"><span id="lectura"></span></p>
+
+<script type="text/javascript">
+
+    const palabra = prompt("Introduce una palabra");
+    const vocales = ["a", "e", "i", "o", "u"];
+    let numVocales = 0;
+    let numConsonantes = 0;
+
+    for (let letra of palabra) {
+        if (vocales.includes(letra.toLowerCase())) {
+            numVocales++;
+        } else if (letra.match(/[a-z]/i)) {
+            numConsonantes++;
+        }
+    }
+
+    lectura.innerHTML = (`La palabra "${palabra}" tiene ${numVocales} vocales y ${numConsonantes} consonantes y su longitud es ${palabra.length}`);
+
+
+</script>

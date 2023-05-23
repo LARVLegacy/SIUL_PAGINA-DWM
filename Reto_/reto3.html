@@ -1,0 +1,23 @@
+<p class="texto"><span id="lectura"></span></p>
+
+<script type="text/javascript">
+    
+    var numeros = [];
+
+    const numero = parseInt(prompt("Ingresa un número:"));
+
+        for (let i = 1; i <= numero; i++) {
+            if (i % 2 === 0) {
+                numeros[i] = (`${i} - es par`);
+
+            } else {
+                numeros[i] = (`${i} - es impar`);
+                
+            }
+        }
+
+    lectura.innerHTML = numeros
+
+            
+
+</script>

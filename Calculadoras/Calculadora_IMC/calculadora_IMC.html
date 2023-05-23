@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="estilo_IMC.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <title>Caculadora - IMC</title>
+</head>
+<body>
+    <div id="appCalculadora" class="inicio">
+        <form name="calculadoraIMC" class="cuerpo">
+            <h1>Calculadora IMC</h1>
+
+            <p class="texto">Ingrese peso (Kg): <input type="text" id="kg"></p>
+            <p class="texto">Ingrese altura (m): <input type="text" id="m"></p>
+
+            <button id="calcular" class="btn">Calcular</button>
+
+            <p class="texto">IMC: <span id="imc"></span></p>
+            <p class="texto">Lectura: <span id="lectura"></span></p>
+
+            <script type="text/javascript">
+
+                calc = document.getElementById("calcular");
+                kg = document.getElementById("kg");
+                m = document.getElementById("m");
+                imc = document.getElementById("imc");
+                lectura = document.getElementById("lectura");
+
+                calc.onclick = function () {
+
+                    if (kg.value != "" && m.value != "") {
+
+                        imcx = (kg.value / (m.value * m.value));
+                        imc.innerHTML = imcx;
+                        console.log(imcx);
+
+                        if (imcx < 18.5) {
+                            lectura.innerHTML = "Peso inferior al normal";
+                        }
+                        else if (imcx >= 18.5 && imcx <= 24.9) {
+                            lectura.innerHTML = "Peso normal"
+                        }
+                        else if (imcx >= 25 && imcx <= 29.9) {
+                            lectura.innerHTML = "Peso superior a lo normal"
+                        }
+                        else if (imcx > 30) {
+                            lectura.innerHTML = "Obesidad"
+                        }
+                    } else {
+                        alert("Debes ingresar peso y altura.")
+                    }
+                };
+
+            </script>
+        </form>
+    </div>
+
+</body>
+
+</html>

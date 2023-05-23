@@ -1,0 +1,18 @@
+<p class="texto"><span id="lectura"></span></p>
+
+<script type="text/javascript">
+
+    const letrasDNI = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+    const dni = parseInt(prompt("Introduce tu número de DNI (sin letra)"));
+
+    if (dni > 0 && dni <= 99999999) {
+        const letraDNI = letrasDNI[dni % 23];
+        mensaje = (`La letra que corresponde al DNI ${dni} es ${letraDNI}`);
+    } else {
+        mensaje = ("El número de DNI introducido es incorrecto");
+    }
+
+
+    lectura.innerHTML = mensaje;
+
+</script>

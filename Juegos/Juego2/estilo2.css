@@ -1,0 +1,16 @@
+#game-container {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    position: relative;
+  }
+  
+  #pacman {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    top: 180px;
+    left: 180px;
+  }

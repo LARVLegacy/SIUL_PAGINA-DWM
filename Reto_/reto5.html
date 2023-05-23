@@ -1,0 +1,20 @@
+<p class="texto"><span id="lectura"></span></p>
+
+<script type="text/javascript">
+    
+    const numero = parseInt(prompt("Ingresa un número entero mayor que cero:"));
+        let factorial = 1;
+
+        if (numero <= 0) {
+            mensaje = ("El número debe ser mayor que cero.");
+        } else {
+            for (let i = numero; i > 0; i--) {
+                factorial *= i;
+            }
+
+            mensaje = (`El factorial de ${numero} es ${factorial}.`);
+        }
+
+        lectura.innerHTML = mensaje
+
+</script>

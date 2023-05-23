@@ -1,0 +1,30 @@
+<p class="texto"><span id="lectura"></span></p>
+<p class="texto"><span id="lectura1"></span></p>
+<p class="texto"><span id="lectura2"></span></p>
+
+<script type="text/javascript">
+    
+    var numeros = [2, 5, 7, 9, 10];
+    var pares = [];
+    var impares = [];
+
+    const aleatorio = Math.floor(Math.random() * 10);
+    var mensaje = []
+
+    for (let i = 0; i < numeros.length; i++) {
+        
+        resultado = aleatorio * numeros[i];
+        mensaje[i] = (`${numeros[i]} x ${aleatorio} = ${resultado}`);
+
+        if (resultado % 2 === 0) {
+                pares.push(resultado);
+        } else {
+            impares.push(resultado);
+        }
+    }
+
+    lectura.innerHTML = mensaje
+    lectura1.innerHTML = (`Array de pares: ${pares}`);
+    lectura2.innerHTML = (`Array de impares: ${impares}`);
+
+</script>
